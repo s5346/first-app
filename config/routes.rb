@@ -1,6 +1,6 @@
 FirstApp::Application.routes.draw do
-#get "hello" => "hello#index"
-
+get "hello" => "hello#index"
+get "greeting" => "hello#greeting"
 root to:"hello#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

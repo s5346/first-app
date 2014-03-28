@@ -49,3 +49,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# bootstrap
+gem 'bootstrap-sass', '~> 3.0.3.0'
+

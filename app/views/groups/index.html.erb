@@ -1,1 +1,27 @@
-<h1>index</h1>
+<div class="span12">
+  <div class="group">
+    <%= link_to("New Group",new_group_path, :class => "btn btn-mini btn-primary pull-right") %>
+  </div>
+
+  <h3>My First app 討論版</h3>
+  <table class="table">
+    <thrad>
+      <tr>
+        <td>#</td>
+        <td> 版名 </td>
+        <td> 介紹 </td>
+      </tr>
+    </thrad>
+
+    <tbody>
+      <% @groups.each do |group| %>
+        <tr>
+          <td> # </td>
+          <td> <%= link_to(group.title, group_path(group)) %></td>
+          <td> <%= group.description %>
+          <td> <%= link_to("Edit", edit_group_path(group), :class => "btn btn-mini") %><%= link_to("Delete", group_path(group), :class => "btn btn-mini", :method => :delete, :confirm => "Are you sure?") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
